@@ -39,6 +39,38 @@ describe "User pages" do
         fill_in "Confirmation", with: "foobar"
       end
 
+
+
+      #  before { click_button submit }
+
+       # it { should have_title('Sign up') }
+       # it { should have_content('error') }
+      #end
+
+     # describe "after submission"  do
+      #  after { click_button submit }
+
+       # let(:shared) { "error_messages" }
+
+       # it "has error error_messages" do
+        # render shared.error_messages: false
+          
+    
+  #end
+  
+        
+   # describe "after submission"  do
+     #   after { click_button submit }
+
+     #   let(:shared) { "error_messages" }
+
+       # it "doe not have error error_messages" do
+       #   render shared.error_messages => true
+    
+#end
+#end
+
+
       it "should create a user" do
         expect { click_button submit }.to change(User, :count).by(1)
       end

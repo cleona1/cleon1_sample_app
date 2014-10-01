@@ -1,9 +1,6 @@
-<<<<<<< HEAD
 
 
 =begin
-=======
->>>>>>> sign-in-out
 class SessionsController < ApplicationController
 
   def new
@@ -21,7 +18,6 @@ class SessionsController < ApplicationController
 
   def destroy
   end
-<<<<<<< HEAD
 end
 
 =end
@@ -45,6 +41,4 @@ def destroy
 sign_out
 redirect_to root_url
 end
-=======
->>>>>>> sign-in-out
 end

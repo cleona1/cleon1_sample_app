@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 =begin
 module SessionsHelper
 
@@ -77,7 +76,3 @@ def sign_out
   end
 end
 
-=======
-module SessionsHelper
-end
->>>>>>> sign-in-out

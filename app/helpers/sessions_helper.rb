@@ -1,4 +1,4 @@
-=begin
+
 module SessionsHelper
 
   def sign_in(user)
@@ -22,9 +22,13 @@ module SessionsHelper
     @current_user ||= User.find_by(remember_token: remember_token)
   end
 end
-=end
 
 
+
+
+
+
+=begin
 
 module SessionsHelper
 
@@ -75,4 +79,4 @@ def sign_out
  
   end
 end
-
+=end

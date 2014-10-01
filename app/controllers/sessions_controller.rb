@@ -1,6 +1,6 @@
 
-
 =begin
+
 class SessionsController < ApplicationController
 
   def new
@@ -19,7 +19,6 @@ class SessionsController < ApplicationController
   def destroy
   end
 end
-
 =end
 
 

@@ -29,16 +29,8 @@ describe "User pages" do
       it "should not create a user" do
         expect { click_button submit }.not_to change(User, :count)
       end
-
-    
-    
-    #describe "error messages" do
-        
-      #  before { click_button submit }
-      #  it { should have_selector('title', text: 'Sign up') }
-      #  it { should have_content('error') }
-      #end
     end
+
 
 
 
@@ -68,21 +60,12 @@ describe "User pages" do
     end
   end
 
-=begin
- describe "edit" do
-    let(:user) { FactoryGirl.create(:user) }
-    before { sign_in user } #######################################
-    before { visit edit_user_path(user) }
-
-=end
-
     describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
     before do
       sign_in user
       visit edit_user_path(user)
     end
-    
 
     describe "page" do
       it { should have_content("Update your profile") }
@@ -95,7 +78,9 @@ describe "User pages" do
 
       it { should have_content('error') }
     end
-  describe "with valid information" do
+
+
+     describe "with valid information" do
       let(:new_name)  { "New Name" }
       let(:new_email) { "new@example.com" }
       before do
@@ -115,5 +100,3 @@ describe "User pages" do
   end
 end
 
-
-  

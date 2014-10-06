@@ -169,8 +169,9 @@ describe "micropost associations" do
       microposts.each do |micropost|
         expect(Micropost.where(id: micropost.id)).to be_empty
       end
+    end
 
-      describe "status" do
+       describe "status" do
       let(:unfollowed_post) do
         FactoryGirl.create(:micropost, user: FactoryGirl.create(:user))
       end
@@ -181,8 +182,7 @@ describe "micropost associations" do
     end
   end
 end
-end
-    
+
   
 
 

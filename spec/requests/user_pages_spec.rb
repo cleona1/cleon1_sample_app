@@ -1,3 +1,4 @@
+
 require 'spec_helper'
 
 describe "User pages" do
@@ -30,6 +31,8 @@ describe "index" do
         end
       end
     end
+
+
      describe "delete links" do
 
       it { should_not have_link('delete') }
@@ -63,17 +66,14 @@ describe "index" do
     it { should have_content(user.name) }
     it { should have_title(user.name) }
 
+
     describe "microposts" do
       it { should have_content(m1.content) }
       it { should have_content(m2.content) }
       it { should have_content(user.microposts.count) }
     end
-
-
-
-
-
-
+  
+  
     describe "follow/unfollow buttons" do
       let(:other_user) { FactoryGirl.create(:user) }
       before { sign_in user }
@@ -98,6 +98,9 @@ describe "index" do
           it { should have_xpath("//input[@value='Unfollow']") }
         end
       end
+
+
+
 
       describe "unfollowing a user" do
         before do
@@ -127,14 +130,19 @@ describe "index" do
 
 
 
+  describe "signup page" do
+    before { visit signup_path }
+      it { should have_content('Sign up') }
+      it { should have_title(full_title('Sign up')) }
+  end
 
 
 
   describe "signup" do
 
     before { visit signup_path }
-
-    let(:submit) { "Create my account" }
+    
+      let(:submit) { "Create my account" }
 
     describe "with invalid information" do
       it "should not create a user" do
@@ -170,6 +178,8 @@ describe "index" do
       end
     end
   end
+
+
 
     describe "edit" do
     let(:user) { FactoryGirl.create(:user) }
@@ -223,7 +233,7 @@ describe "index" do
       end
       specify { expect(user.reload).not_to be_admin }
     end
-  end
+  
 
 
 
@@ -257,6 +267,8 @@ describe "index" do
     end
   end
 end
+end
+
 
 
 
